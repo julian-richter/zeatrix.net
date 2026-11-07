@@ -2,13 +2,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Zeatrix.Infrastructure.Persistance;
 
-public class AppDbContext : DbContext
+public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {
-    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) {}
-    
-    protected override void OnModelCreating(ModelBuilder mBuilder)
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        mBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
-        base.OnModelCreating(mBuilder);
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+        base.OnModelCreating(modelBuilder);
     }
 }
