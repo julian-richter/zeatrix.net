@@ -1,0 +1,15 @@
+<Solution>
+    <Folder Name="/aspire/">
+        <Project Path="Zeatrix.AppHost/Zeatrix.AppHost.csproj"/>
+    </Folder>
+    <Folder Name="/src/">
+        <Project Path="Zeatrix.Application/Zeatrix.Application.csproj"/>
+        <Project Path="Zeatrix.Domain/Zeatrix.Domain.csproj"/>
+        <Project Path="Zeatrix.Infrastructure/Zeatrix.Infrastructure.csproj"/>
+        <Project Path="zeatrix.presentation/zeatrix.presentation.csproj"/>
+    </Folder>
+    <Folder Name="/src/Infrastructure/">
+        <Project Path="MigrationService/MigrationService.csproj"/>
+    </Folder>
+    <Folder Name="/tests/"/>
+</Solution>
